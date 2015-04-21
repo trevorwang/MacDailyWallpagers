@@ -3,5 +3,5 @@
 ```
 crontab -e
 
-0 12 * * * ruby /Users/mingwan/bin/daily_wallpapers.rb
+0 12 * * * ruby /path/to/daily_wallpapers.rb
 ```
