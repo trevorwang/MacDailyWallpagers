@@ -1,6 +1,6 @@
 # MacDailyWallpagers
 
-`rb-appscript` lib will be used for apply the settings to mac os. So you must install the lib first with command `gem install rb-appscript`
+`rb-appscript` lib will be used for apply the settings to mac os. So you must install the lib first with command `gem update --system && gem install rb-appscript`
 
 ```
 crontab -e

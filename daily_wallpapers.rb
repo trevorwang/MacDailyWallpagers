@@ -5,6 +5,8 @@ require 'appscript'  # use`gem install rb-appscript` to install appscript
 
 http_url = "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-cn"
 
+system('mkdir -p $HOME/Pictures/wallpagers')
+
 begin
 	pic_hash = JSON.parse(Net::HTTP.get(URI(http_url)))
 	url = pic_hash["images"][0]["url"]
