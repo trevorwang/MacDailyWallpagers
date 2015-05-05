@@ -7,12 +7,15 @@ http_url = "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-c
 
 `mkdir -p $HOME/Pictures/wallpapers`
 home = `echo $HOME`.strip
-
 begin
 	pic_hash = JSON.parse(Net::HTTP.get(URI(http_url)))
 	url = pic_hash["images"][0]["url"]
 	name = url.split('/').last
 	pic_file = "#{home}/Pictures/wallpapers/#{name}" 
+	# to fix issue that url may not be valid
+	unless url.start_with? 'http://'
+		url = "http://cn.bing.com/" + url
+	end
 	File.open pic_file, 'wb' do |client|
 		open url, 'rb' do | remote|
 			client.write remote.read
