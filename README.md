@@ -1,4 +1,5 @@
 # MacDailyWallpagers
+## get wallpapers from bing.com home page
 
 `rb-appscript` lib will be used for apply the settings to mac os. So you must install the lib first with command `gem update --system && gem install rb-appscript`
 
