@@ -1,0 +1,3 @@
+[submodule "rb-appscript"]
+	path = rb-appscript
+	url = ./rb-appscript
